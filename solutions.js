@@ -28,8 +28,18 @@ console.log('****************************'); //visual task separator
 
 //////////////////////////////////////////
 // Count Odd Numbers
-// Write a function named oddNumberCount which receives one argument that should be a number. The function should return how many positive odd numbers there are below the number passed into the argument.
-
+// Write a function named oddNumberCount which receives one argument that should be a number. 
+//The function should return how many positive odd numbers there are below the number passed into the argument.
+const oddNumberCount = (number) => { //declaring the function
+    let count = 0; //setting up counter to keep our intermediate results
+        for( let i = 1; i < number ; i++) { //FOR loop between the 0 and a given number/variable
+            if (i % 2 !== 0) { //checking if odd
+                count++; 
+            }
+        }
+    return count; //function has to have return to avoid undefined result
+}
+console.log(oddNumberCount(7)); //invoking the function within the console.log
 // Example expected output:
 
 // oddNumberCount(7) // => returns 3 (because [1, 3, 5] are the positive odd numbers below 7)
